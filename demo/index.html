@@ -19,23 +19,23 @@
 
 	<div class="g-nav">
 		<ul>
-			<li><a href="#" rel="1">Visual Arts</a></li>
-			<li><a href="#" rel="2">Performing Arts</a></li>
-			<li><a href="#" rel="3">Events &amps; Workshops</a></li>
-			<li><a href="#" rel="4">Media Gallery</a></li>
-			<li><a href="#" rel="5">Design solutions</a></li>
-			<li><a href="#" rel="6">About Us</a></li>
+			<li><a href="visual.html" rel="1">Visual Arts</a></li>
+			<li><a href="performing.html" rel="2">Performing Arts</a></li>
+			<li><a href="events.html" rel="3">Events &amps; Workshops</a></li>
+			<li><a href="media.html" rel="4">Media Gallery</a></li>
+			<li><a href="design.html" rel="5">Design Solutions</a></li>
+			<li><a href="aboutus.html" rel="6">About Us</a></li>
 		</ul>
 	</div>
 
 	<div class="slider">
 		<div id="slider">
-			<a href="#"><img src="http://r4.ykimg.com/05100000563D4FCF67BC3D5486079CD0" /></a>
-			<a href="#"><img src="http://r3.ykimg.com/05100000563B0AB667BC3D68EA0AEBC2" /></a>
-			<a href="#"><img src="http://r2.ykimg.com/051000005639776D67BC3D1557072A52" /></a>
-			<a href="#"><img src="http://r3.ykimg.com/051000005636C90267BC3D22E602C945" /></a>
-			<a href="#"><img src="http://r4.ykimg.com/05100000563C437267BC3D14860C1B4F" /></a>
-			<a href="#"><img src="http://r2.ykimg.com/051000005632236167BC3D12840627E2" /></a>
+			<a href="visual.html"><img src="http://r4.ykimg.com/05100000563D4FCF67BC3D5486079CD0" /></a>
+			<a href="performing.html"><img src="http://r3.ykimg.com/05100000563B0AB667BC3D68EA0AEBC2" /></a>
+			<a href="events.html"><img src="http://r2.ykimg.com/051000005639776D67BC3D1557072A52" /></a>
+			<a href="media.html"><img src="http://r3.ykimg.com/051000005636C90267BC3D22E602C945" /></a>
+			<a href="design.html"><img src="http://r4.ykimg.com/05100000563C437267BC3D14860C1B4F" /></a>
+			<a href="aboutus.html"><img src="http://r2.ykimg.com/051000005632236167BC3D12840627E2" /></a>
 		</div>
 	</div>
 
@@ -50,20 +50,21 @@ $(function(){
 
 	var slider = $("#slider").lightSlider({ 
 		item: 1,
-		speed: 400,
+		speed: 700,
         auto: true,
         loop: true,
-        pause: 5000,
+        pause: 7000,
 		keyPress: true,
 		pager: false,
 		enableDrag: false,
 		slideEndAnimation: true
 	}); 
 
-	$('.g-nav a').click(function(){
+	$('.g-nav a').mouseenter(function(){
 		var index = parseInt($(this).attr('rel'));
 		slider.goToSlide(index);
 	});
+
 });
 </script>
 

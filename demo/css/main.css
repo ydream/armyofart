@@ -1,6 +1,6 @@
 /* reset style */ 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
-body{color:#000;background:#fff;font-size:12px;line-height:1.25;font-family:Tahoma,sans-serif;}
+body{color:#d5cfc6;background:#fff;font-size:12px;line-height:1.25;font-family:Tahoma,sans-serif;}
 th,td{text-align:left;vertical-align:top}
 h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal}
 p{margin:0 0 1em 0}
@@ -27,10 +27,10 @@ textarea{border-color:#9f9f9f #dcdcdc #dcdcdc #9f9f9f;border-style:solid;border-
 
 
 /* main style */
-html { width: 100%; height: 100%; }
+html { width: 100%; height: 100%; overflow: hidden; }
 body { min-width: 1228px; height: 100%; background: #000 url(../img/bg.jpg) center top no-repeat; }
 
-.g-container { width: 1228px; height: 100%; margin: 0 auto; background: rgba(0,0,0,.5); overflow: auto; }
+.g-container { width: 1228px; height: 100%; margin: 0 auto; background: rgba(0,0,0,.5); overflow: auto; position: relative; }
 
 .g-header { height: 150px; overflow: hidden; position: relative; }
 .g-header .logo { width: 137px; height: 137px; overflow: hidden; position: absolute; left: 0; top: 0; }
@@ -46,4 +46,87 @@ body { min-width: 1228px; height: 100%; background: #000 url(../img/bg.jpg) cent
 .slider { width: 1220px; height: 467px; border: 4px solid #797979; background: #404040; overflow: hidden; }
 .slider img { width: 100%; height: 100%; }
 .lightSlider { height: 467px !important; }
+
+
+/* inner style */
+.i-container { width: 1220px; background: rgba(41,41,41,.9); border: 4px solid #797979; position: absolute; top: 150px; left: 0; right: 0; bottom: 0; overflow: hidden; }
+.i-content { padding: 5px 110px 40px; }
+.i-content h2 { height: 40px; line-height: 40px; margin: 40px 0; background: url(../img/title.png) no-repeat; text-indent: -3000px; }
+.i-content h2.t-visual { background-position: 0 0; }
+.i-content h2.t-performing { background-position: 0 -40px; }
+.i-content h2.t-events { background-position: 0 -80px; }
+.i-content h2.t-media { background-position: 0 -120px; }
+.i-content h2.t-design { background-position: 0 -160px; }
+.i-content h2.t-aboutus { background-position: 0 -200px; }
+.i-content h2.t-desc { background-position: 0 -280px; }
+.i-content h2.t-videos { background-position: 0 -320px; }
+.i-content h2.t-photos { background-position: 0 -360px; }
+
+.i-content h2.t-desc,
+.i-content h2.t-videos,
+.i-content h2.t-photos { margin: 40px 0 20px; }
+
+.i-content .description { font-size: 14px; line-height: 180%; }
+.i-content .media img { width: 100%; max-width: 100%; }
+
+
+/** nano scroller initial setup **/
+.nano {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+.nano > .nano-content {
+  position   : absolute;
+  overflow   : scroll;
+  overflow-x : hidden;
+  top        : 0;
+  right      : 0;
+  bottom     : 0;
+  left       : 0;
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+.nano > .nano-pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 9px;
+  right      : 8px;
+  top        : 8px;
+  bottom     : 12px;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 0px;
+  -webkit-border-radius : 0px;
+  border-radius         : 0px;
+}
+.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: rgba(88,87,87,.9);
+  position              : relative;
+  margin                : 2px;
+  -moz-border-radius    : 0px;
+  -webkit-border-radius : 0px;
+  border-radius         : 0px;
+  z-index				: 1;
+}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+.nano > .nano-pane:after {
+	content: ''; width: 9px; height: 4px; background: rgba(0,0,0,.25); position: absolute; left: 0; bottom: -4px;
+}
 
