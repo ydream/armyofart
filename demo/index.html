@@ -2,31 +2,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Army Of Art</title>
+<title>Army of Art</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/lightslider.css" type="text/css" />
 </head>
 
 <body>
 
-<div class="g-header">
+<div class="g-container">
 
-</div>
-
-<div class="index-banner">
-	<ul>
-		<li class="menu1">Visual Arts</li>
-		<li class="menu2">Performing Arts</li>
-		<li class="menu3">Events &amps; Workshops</li>
-		<li class="menu4">Media Gallery</li>
-		<li class="menu5">Design solutions</li>
-		<li class="menu5">About Us</li>
-	</ul>
-	<div class="slider">
-
+	<div class="g-header">
+		<div class="logo"><a href="./">Army of Art</a></div>
+		<div class="slogon">DON'T IMAGINE HAPPINESS, CREATE IT.</div>
+		<div class="info"></div>
 	</div>
+
+	<div class="g-nav">
+		<ul>
+			<li><a href="#" rel="1">Visual Arts</a></li>
+			<li><a href="#" rel="2">Performing Arts</a></li>
+			<li><a href="#" rel="3">Events &amps; Workshops</a></li>
+			<li><a href="#" rel="4">Media Gallery</a></li>
+			<li><a href="#" rel="5">Design solutions</a></li>
+			<li><a href="#" rel="6">About Us</a></li>
+		</ul>
+	</div>
+
+	<div class="slider">
+		<div id="slider">
+			<a href="#"><img src="http://r4.ykimg.com/05100000563D4FCF67BC3D5486079CD0" /></a>
+			<a href="#"><img src="http://r3.ykimg.com/05100000563B0AB667BC3D68EA0AEBC2" /></a>
+			<a href="#"><img src="http://r2.ykimg.com/051000005639776D67BC3D1557072A52" /></a>
+			<a href="#"><img src="http://r3.ykimg.com/051000005636C90267BC3D22E602C945" /></a>
+			<a href="#"><img src="http://r4.ykimg.com/05100000563C437267BC3D14860C1B4F" /></a>
+			<a href="#"><img src="http://r2.ykimg.com/051000005632236167BC3D12840627E2" /></a>
+		</div>
+	</div>
+
+	<div class="qrcode"></div>
+
 </div>
 
-<div class="qrcode"></div>
-	
+<script src="http://static.youku.com/v1.0.1102/js/jquery.js"></script>
+<script src="js/lightslider.js"></script>
+<script>
+$(function(){
+
+	var slider = $("#slider").lightSlider({ 
+		item: 1,
+		speed: 400,
+        auto: true,
+        loop: true,
+        pause: 5000,
+		keyPress: true,
+		pager: false,
+		enableDrag: false,
+		slideEndAnimation: true
+	}); 
+
+	$('.g-nav a').click(function(){
+		var index = parseInt($(this).attr('rel'));
+		slider.goToSlide(index);
+	});
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,49 @@
+/* reset style */ 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+body{color:#000;background:#fff;font-size:12px;line-height:1.25;font-family:Tahoma,sans-serif;}
+th,td{text-align:left;vertical-align:top}
+h1,h2,h3,h4,h5,h6{font-size:1em;font-weight:normal}
+p{margin:0 0 1em 0}
+blockquote{margin:0 0 1em 0}
+a{color:#0063dc;text-decoration:none;font-family:Tahoma,sans-serif;outline:none}
+a:hover{text-decoration:underline}
+img{display:block;border:0}
+li{list-style:none}
+ol{padding:0 0 0 2em}
+input,label,select,option,textarea,button,fieldset,legend{font-size:1em;font-family:Tahoma,sans-serif}
+input[type=text],input[type=password]{-webkit-appearance:none;-webkit-border-radius:0;outline:none}
+input.text{color:#444;border-color:#9f9f9f #dcdcdc #dcdcdc #9f9f9f;border-style:solid;border-width:1px;padding:3px 2px;height:14px}
+input.radio,input.checkbox{margin-right:2px;vertical-align:-2px}
+input.radio,input.checkbox{margin-left:-2px}
+label.radio,label.checkbox{margin-right:5px}
+textarea{border-color:#9f9f9f #dcdcdc #dcdcdc #9f9f9f;border-style:solid;border-width:1px;padding:1px;resize:none}
+.fix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.fix{display:inline-block;min-height:1%}
+/*\*/
+*html .fix{zoom:1}
+.fix{display:block}
+/**/
+.clearleft{clear:left}
+
+
+/* main style */
+html { width: 100%; height: 100%; }
+body { min-width: 1228px; height: 100%; background: #000 url(../img/bg.jpg) center top no-repeat; }
+
+.g-container { width: 1228px; height: 100%; margin: 0 auto; background: rgba(0,0,0,.5); overflow: auto; }
+
+.g-header { height: 150px; overflow: hidden; position: relative; }
+.g-header .logo { width: 137px; height: 137px; overflow: hidden; position: absolute; left: 0; top: 0; }
+.g-header .logo a { display: block; width: 100%; height: 100%; background: url(../img/logo.png) no-repeat; text-indent: -3000px; }
+.g-header .info, .g-header .slogon { width: 180px; height: 80px; background: url(../img/slogon.png) 0 0 no-repeat; overflow: hidden; position: absolute; left: 157px; top: 29px; text-indent: -3000px; }
+.g-header .info { width: 228px; height: 130px; background-position: 0 -133px; position: absolute; right: 10px; top: 10px; left: auto; }
+
+.g-nav { height: 50px; background: #666 url(../img/menus.png) 0 14px no-repeat; overflow: hidden; }
+.g-nav li { float: left; }
+.g-nav li a { display: block; width: 202px; height: 50px; line-height: 50px; border-left: 3px solid #464646; text-align: center; text-indent: -3000px; }
+.g-nav li:first-child a { border-left: none; }
+
+.slider { width: 1220px; height: 467px; border: 4px solid #797979; background: #404040; overflow: hidden; }
+.slider img { width: 100%; height: 100%; }
+.lightSlider { height: 467px !important; }
+
